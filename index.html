@@ -30,6 +30,14 @@
                 transform: translateX(-50%);
             }
         }
+        /* Garantir que o container da imagem mantenha um aspecto agradável sem altura fixa */
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            min-height: 200px; /* Altura mínima para o placeholder */
+        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-rose-50 via-white to-rose-50 text-slate-800 antialiased min-h-screen relative overflow-hidden">
@@ -97,8 +105,8 @@
                     <p class="text-slate-600 leading-relaxed mb-4">
                         O dia em que aceitamos caminhar juntos. O começo de um namoro que mudaria as nossas vidas para sempre e daria início ao nosso capítulo mais feliz.
                     </p>
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
-                        <img src="image1.png" alt="Nosso começo" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image1.png</div>';">
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2 img-container">
+                        <img src="image1.png" alt="Nosso começo" class="max-w-full h-auto max-h-[400px] object-contain rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image1.png</div>';">
                     </div>
                 </div>
                 <div class="hidden md:block w-[45%]"></div>
@@ -114,8 +122,8 @@
                     <p class="text-slate-600 leading-relaxed mb-4">
                         Com a certeza de que fomos feitos um para o outro, dissemos o primeiro "sim" em direção ao nosso futuro. O noivado foi a promessa do nosso 'para sempre'.
                     </p>
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
-                        <img src="image2.png" alt="Nosso noivado" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image2.png</div>';">
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2 img-container">
+                         <img src="image2.png" alt="Nosso noivado" class="max-w-full h-auto max-h-[400px] object-contain rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image2.png</div>';">
                     </div>
                 </div>
                 <div class="hidden md:block w-[45%]"></div>
@@ -131,8 +139,8 @@
                     <p class="text-slate-600 leading-relaxed mb-4">
                         O dia em que nos tornamos um só perante Deus e o mundo. O início oficial da nossa família e da nossa jornada dividindo o mesmo teto, os mesmos sonhos e a mesma vida.
                     </p>
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
-                        <img src="image3.png" alt="Nosso casamento" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image3.png</div>';">
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2 img-container">
+                         <img src="image3.png" alt="Nosso casamento" class="max-w-full h-auto max-h-[400px] object-contain rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image3.png</div>';">
                     </div>
                 </div>
                 <div class="hidden md:block w-[45%]"></div>
@@ -148,8 +156,8 @@
                     <p class="text-slate-600 leading-relaxed mb-4">
                         O nosso amor transbordou e ganhou um rosto, um sorriso e uma voz. A chegada do Arthur transformou as nossas vidas e nos ensinou um nível completamente novo de amor.
                     </p>
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
-                        <img src="image4.png" alt="Nascimento do Arthur" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image4.png</div>';">
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2 img-container">
+                         <img src="image4.png" alt="Nascimento do Arthur" class="max-w-full h-auto max-h-[400px] object-contain rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image4.png</div>';">
                     </div>
                 </div>
                 <div class="hidden md:block w-[45%]"></div>
@@ -163,10 +171,10 @@
                     </span>
                     <h3 class="text-xl font-bold text-slate-900 mb-2">A Chegada do Adriel Nicolas</h3>
                     <p class="text-slate-600 leading-relaxed mb-4">
-                        O nosso lar ficou ainda mais completo, alegre e cheio de vida. O Adriel chegou para multiplicar as nossas bênçãos e consolidar a nossa linda família.
+                        O nosso lar ficou ainda mais completo, alegre e cheio de vida. O Adriel chegou para multiplicar as nossas blessings e consolidar a nossa linda família.
                     </p>
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
-                        <img src="image5.png" alt="Nascimento do Adriel" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image5.png</div>';">
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2 img-container">
+                         <img src="image5.png" alt="Nascimento do Adriel" class="max-w-full h-auto max-h-[400px] object-contain rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image5.png</div>';">
                     </div>
                 </div>
                 <div class="hidden md:block w-[45%]"></div>
