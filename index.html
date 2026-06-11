@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - LUCAMILA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-romantic {
+            font-family: 'Great Vibes', cursive;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #fecdd3; /* rose-200 */
+        }
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-rose-50 via-white to-rose-50 text-slate-800 antialiased min-h-screen relative overflow-hidden">
+
+    <div id="youtubePlayer" style="display: none; position: absolute; width: 0; height: 0; border: 0;"></div>
+
+    <div id="envelopeOverlay" class="fixed inset-0 bg-rose-950 z-50 flex flex-col items-center justify-center p-6 transition-all duration-1000 ease-in-out transform">
+        <div class="max-w-md w-full bg-white rounded-2xl p-8 shadow-2xl text-center border-2 border-rose-200 relative overflow-hidden">
+            <div class="absolute -top-6 -left-6 w-12 h-12 bg-rose-100 rounded-full"></div>
+            <div class="absolute -top-6 -right-6 w-12 h-12 bg-rose-100 rounded-full"></div>
+            
+            <div class="text-rose-500 text-5xl mb-4 animate-pulse">❤️</div>
+            <h2 class="font-romantic text-5xl text-rose-950 mb-2">LUCAMILA</h2>
+            <p class="text-slate-600 text-sm tracking-wide uppercase mb-8">Uma surpresa para a mulher da minha vida</p>
+            
+            <p class="text-slate-500 mb-8 text-sm leading-relaxed">
+                 Preparei algo muito especial para você. <br>
+                Clique no botão abaixo para abrir a nossa carta.
+            </p>
+            
+            <button id="openLetterBtn" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none ring-4 ring-rose-100 flex items-center justify-center gap-2">
+                <span>✉️ Abrir Carta</span>
+            </button>
+            
+            <div class="mt-6 text-xl">
+                🐞 & 🤓
+            </div>
+        </div>
+    </div>
+
+    <button id="musicToggle" class="fixed bottom-6 right-6 bg-rose-500 hover:bg-rose-600 text-white p-4 rounded-full shadow-xl z-40 transition-all duration-300 flex items-center justify-center transform hover:scale-105 border-2 border-rose-200 focus:outline-none hidden">
+        <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </button>
+
+    <div id="mainContent" class="opacity-0 transition-opacity duration-1000 h-0 overflow-hidden">
+        <header class="relative px-6 py-16 md:py-24 text-center max-w-3xl mx-auto">
+            <div class="inline-block bg-rose-100 text-rose-700 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 shadow-sm">
+                O Projeto LUCAMILA ❤️
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-rose-950 tracking-tight leading-tight mb-6">
+                De todos os projetos e páginas que já criei, este é o mais <span class="text-rose-600 block md:inline">importante da minha vida.</span>
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                Kamila, eu já passei muitas horas na frente da tela criando telas e sistemas, mas nada se compara à história linda e real que construímos juntos. Cada passo nosso nos trouxe até aqui, e este espaço é para celebrar nós dois.
+            </p>
+            <div class="mt-8 text-2xl font-bold text-rose-500 animate-bounce flex items-center justify-center gap-3">
+                <span class="text-3xl">🐞</span> LUCAMILA <span class="text-3xl">🤓</span>
+            </div>
+        </header>
+
+        <main class="max-w-5xl mx-auto px-4 pb-24 relative timeline-line">
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between">
+                <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-rose-500 border-4 border-white ring-4 ring-rose-100 z-10"></div>
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right md:ml-auto md:order-1 md:pl-8">
+                    <span class="inline-block bg-rose-100 text-rose-700 text-sm font-bold px-3 py-1 rounded-full mb-3">
+                        11 de Fevereiro de 2017
+                    </span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">O Início de Tudo</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        O dia em que aceitamos caminhar juntos. O começo de um namoro que mudaria as nossas vidas para sempre e daria início ao nosso capítulo mais feliz.
+                    </p>
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
+                        <img src="image1.png" alt="Nosso começo" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image1.png</div>';">
+                    </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+            </div>
+
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between">
+                <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-rose-500 border-4 border-white ring-4 ring-rose-100 z-10"></div>
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:mr-auto md:pr-8">
+                    <span class="inline-block bg-rose-100 text-rose-700 text-sm font-bold px-3 py-1 rounded-full mb-3">
+                        17 de Agosto de 2019
+                    </span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">O Próximo Passo</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Com a certeza de que fomos feitos um para o outro, dissemos o primeiro "sim" em direção ao nosso futuro. O noivado foi a promessa do nosso 'para sempre'.
+                    </p>
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
+                        <img src="image2.png" alt="Nosso noivado" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image2.png</div>';">
+                    </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+            </div>
+
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between">
+                <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-rose-500 border-4 border-white ring-4 ring-rose-100 z-10"></div>
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right md:ml-auto md:order-1 md:pl-8">
+                    <span class="inline-block bg-rose-100 text-rose-700 text-sm font-bold px-3 py-1 rounded-full mb-3">
+                        14 de Março de 2020
+                    </span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">O Nosso Grande Dia</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        O dia em que nos tornamos um só perante Deus e o mundo. O início oficial da nossa família e da nossa jornada dividindo o mesmo teto, os mesmos sonhos e a mesma vida.
+                    </p>
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
+                        <img src="image3.png" alt="Nosso casamento" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image3.png</div>';">
+                    </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+            </div>
+
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-start md:justify-between">
+                <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-rose-500 border-4 border-white ring-4 ring-rose-100 z-10"></div>
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:mr-auto md:pr-8">
+                    <span class="inline-block bg-rose-100 text-rose-700 text-sm font-bold px-3 py-1 rounded-full mb-3">
+                        17 de Julho de 2021
+                    </span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">O Nascimento do Arthur Miguel</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        O nosso amor transbordou e ganhou um rosto, um sorriso e uma voz. A chegada do Arthur transformou as nossas vidas e nos ensinou um nível completamente novo de amor.
+                    </p>
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
+                        <img src="image4.png" alt="Nascimento do Arthur" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image4.png</div>';">
+                    </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+            </div>
+
+            <div class="relative mb-8 flex flex-col md:flex-row items-start md:justify-between">
+                <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-3 h-3 rounded-full bg-rose-500 border-4 border-white ring-4 ring-rose-100 z-10"></div>
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right md:ml-auto md:order-1 md:pl-8">
+                    <span class="inline-block bg-rose-100 text-rose-700 text-sm font-bold px-3 py-1 rounded-full mb-3">
+                        7 de Janeiro de 2026
+                    </span>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">A Chegada do Adriel Nicolas</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        O nosso lar ficou ainda mais completo, alegre e cheio de vida. O Adriel chegou para multiplicar as nossas bênçãos e consolidar a nossa linda família.
+                    </p>
+                    <div class="rounded-2xl overflow-hidden shadow-md border border-rose-100 bg-white p-2">
+                        <img src="image5.png" alt="Nascimento do Adriel" class="w-full h-48 md:h-64 object-cover rounded-xl" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-48 md:h-64 bg-rose-50 flex items-center justify-center text-rose-300 rounded-xl\\'>📸 image5.png</div>';">
+                    </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+            </div>
+        </main>
+
+        <footer class="bg-rose-950 text-white text-center py-16 px-6 mt-12 pb-24">
+            <div class="max-w-2xl mx-auto">
+                <p class="font-romantic text-4xl text-rose-200 mb-4">Com todo o meu amor,</p>
+                <p class="text-lg font-light text-rose-100/80 leading-relaxed mb-8">
+                    Obrigado por ser minha parceira em cada uma dessas datas e em todos os dias comuns entre elas. Que nossa história continue ganhando novos e lindos momentos.
+                </p>
+                <div class="text-sm tracking-widest text-rose-300 uppercase font-semibold flex flex-col items-center gap-2">
+                    <span>Sua eterna 🐞 & Seu eterno 🤓</span>
+                    <span class="text-rose-400 font-bold text-lg mt-1 tracking-widest">SEMPRE LUCAMILA</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var player;
+        var isPlaying = false;
+        
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtubePlayer', {
+                height: '0',
+                width: '0',
+                videoId: 'kw7hPcNh6_M',
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'loop': 1,
+                    'playlist': 'kw7hPcNh6_M'
+                }
+            });
+        }
+
+        const envelopeOverlay = document.getElementById('envelopeOverlay');
+        const mainContent = document.getElementById('mainContent');
+        const openLetterBtn = document.getElementById('openLetterBtn');
+        const musicToggle = document.getElementById('musicToggle');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+
+        openLetterBtn.addEventListener('click', () => {
+            if (player && player.playVideo) {
+                player.playVideo();
+                isPlaying = true;
+            }
+            
+            envelopeOverlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.classList.remove('overflow-hidden');
+            mainContent.classList.remove('opacity-0', 'h-0', 'overflow-hidden');
+            mainContent.classList.add('opacity-100');
+            
+            musicToggle.classList.remove('hidden');
+            musicToggle.classList.add('animate-pulse');
+            
+            setTimeout(() => {
+                envelopeOverlay.remove();
+            }, 1000);
+        });
+
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                player.pauseVideo();
+                isPlaying = false;
+                pauseIcon.classList.add('hidden');
+                playIcon.classList.remove('hidden');
+                musicToggle.classList.remove('animate-pulse');
+            } else {
+                player.playVideo();
+                isPlaying = true;
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+                musicToggle.classList.add('animate-pulse');
+            }
+        });
+    </script>
+</body>
+</html>
